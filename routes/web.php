@@ -15,11 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('tonmoy')->group(function (){
+Route::get('home', function (){
+   echo "this is home";
+});
+
     Route::get('/about', function (){
         return view('about');
     });
     Route::get('/contact', function (){
         return view('pages.contact');
-    });
-});
+    })->middleware('age');
