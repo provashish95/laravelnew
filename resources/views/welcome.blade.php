@@ -85,9 +85,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Home</a>
-                    <a href="https://laracasts.com">About</a>
-                    <a href="https://laravel-news.com">Contact</a>
+                    <a href="{{url('/')}}">Home</a>
+                    <a href="{{URL::to('/about')}}">About</a>
+                    <a href="{{Route('contact')}}">Contact</a>
                     <a href="https://blog.laravel.com">Blog</a>
 
                 </div>

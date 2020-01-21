@@ -25,4 +25,4 @@ Route::get('/about', function (){
 Route::get('/contact', function (){
         return view('pages.contact');
     });
-Route::get('/hello', 'HelloController@index');
+Route::get(md5('/contact'), 'HelloController@index')->name('contact');
