@@ -14,8 +14,9 @@
 Route::get('/', function () {
     return view('pages.index');
 });
-Route::get('contact/us', 'HelloController@contact')->name('contact');
-Route::get('about/us', 'HelloController@about')->name('about');
+Route::get(md5('contact/us'), 'HelloController@contact')->name('contact');
+Route::get(md5('about/us'), 'HelloController@about')->name('about');
+
 
 
 
