@@ -11,15 +11,15 @@
     <title>Clean Blog - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="{{asset('frontend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('public/frontend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="{{asset('frontend/css/clean-blog.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/frontend/css/clean-blog.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -53,7 +53,7 @@
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url({{URL::to('frontend/img/home-bg.jpg')}})">
+<header class="masthead" style="background-image: url({{URL::to('public/frontend/img/home-bg.jpg')}})">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -112,11 +112,11 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('public/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="{{asset('js/clean-blog.min.js')}}"></script>
+<script src="{{asset('public/js/clean-blog.min.js')}}"></script>
 
 </body>
 
