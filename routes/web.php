@@ -22,6 +22,7 @@ Route::get(md5('write/post'), 'HelloController@writePost')->name('write.post');
 Route::get(md5('all/category'), 'HelloController@allCategory')->name('all.category');
 Route::get(md5('add/category'), 'HelloController@addCategory')->name('add.category');
 Route::post(md5('store/category'), 'HelloController@storeCategory')->name('store.category');
+Route::get('view/category{id}', 'HelloController@viewCategory');
 
 
 

@@ -29,7 +29,7 @@
                          <td>
                              <a href="" class="btn btn-sm btn-info">Edit</a>
                              <a href="" class="btn btn-sm btn-danger">Delete</a>
-                             <a href="" class="btn btn-sm btn-success">view</a>
+                             <a href="{{URL::to('view/category'.$row->id)}}" class="btn btn-sm btn-success">view</a>
                          </td>
                  </tr>
                 @endforeach
