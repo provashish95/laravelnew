@@ -12,7 +12,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('public/frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
+    <!--roy roy roy --><!--roy roy roy -->
+    <!--roy roy roy --><!--roy roy roy -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+    <!--roy roy roy --><!--roy roy roy -->
+    <!--roy roy roy --><!--roy roy roy -->
     <!-- Custom fonts for this template -->
     <link href="{{asset('public/frontend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -59,7 +63,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Clean Blog</h1>
+                    <h1>ROY Blog</h1>
                     <span class="subheading">A Blog Theme by Start Bootstrap</span>
                 </div>
             </div>
@@ -114,9 +118,38 @@
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('public/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!--roy roy roy --><!--roy roy roy -->
+<!--roy roy roy --><!--roy roy roy -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<!--roy roy roy --><!--roy roy roy -->
+<!--roy roy roy --><!--roy roy roy -->
+
 
 <!-- Custom scripts for this template -->
 <script src="{{asset('public/js/clean-blog.min.js')}}"></script>
+<!--roy roy roy--><!--roy roy roy-->
+<!--roy roy roy--><!--roy roy roy-->
+<script>
+@if(Session::has('message'))
+    var type = "{{Session::get('alert-type','info') }}"
+    switch(type){
+      case'info':
+             toastr.info("{{Session::get('message') }}");
+             break;
+    case'success':
+             toastr.success("{{Session::get('message') }}");
+             break;
+    case'warning':
+             toastr.warning("{{Session::get('message') }}");
+             break;
+    case'error':
+             toastr.error("{{Session::get('message') }}");
+             break;
+    }
+    @endif
+</script>
+<!--roy roy roy--><!--roy roy roy-->
+<!--roy roy roy--><!--roy roy roy-->
 
 </body>
 

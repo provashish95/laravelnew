@@ -17,7 +17,12 @@ Route::get('/', function () {
 Route::get(md5('contact/us'), 'HelloController@contact')->name('contact');
 Route::get(md5('about/us'), 'HelloController@about')->name('about');
 Route::get(md5('write/post'), 'HelloController@writePost')->name('write.post');
-Route::get(md5('add/category'), 'HelloController@addcategory')->name('add.category');
+
+//category crud here.......
+Route::get(md5('all/category'), 'HelloController@allCategory')->name('all.category');
+Route::get(md5('add/category'), 'HelloController@addCategory')->name('add.category');
+Route::post(md5('store/category'), 'HelloController@storeCategory')->name('store.category');
+
 
 
 
