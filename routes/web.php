@@ -12,17 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
+Route::get('contact/us', 'HelloController@contact')->name('contact');
+Route::get('about/us', 'HelloController@about')->name('about');
 
-Route::get('home', function (){
-   echo "this is home";
-});
 
-Route::get('/about', function (){
-        return view('about');
-    });
-Route::get('/contact', function (){
-        return view('pages.contact');
-    });
-Route::get(md5('/contact'), 'HelloController@index')->name('contact');
+
