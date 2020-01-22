@@ -13,4 +13,10 @@ class HelloController extends Controller
     public function about(){
         return view('pages.about');
     }
+    public function writePost(){
+        return view('posts.writepost');
+    }
+    public function addcategory(){
+        return view('posts.add_category');
+    }
 }

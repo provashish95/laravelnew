@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 Route::get(md5('contact/us'), 'HelloController@contact')->name('contact');
 Route::get(md5('about/us'), 'HelloController@about')->name('about');
+Route::get(md5('write/post'), 'HelloController@writePost')->name('write.post');
+Route::get(md5('add/category'), 'HelloController@addcategory')->name('add.category');
+
 
 
 
