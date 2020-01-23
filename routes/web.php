@@ -1,33 +1,28 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get(md5('contact/us'), 'HelloController@contact')->name('contact');
-Route::get(md5('about/us'), 'HelloController@about')->name('about');
-Route::get(md5('write/post'), 'HelloController@writePost')->name('write.post');
-
-//category crud here.......
-Route::get(md5('all/category'), 'HelloController@allCategory')->name('all.category');
-Route::get(md5('add/category'), 'HelloController@addCategory')->name('add.category');
-Route::post(md5('store/category'), 'HelloController@storeCategory')->name('store.category');
-Route::get('view/category{id}', 'HelloController@viewCategory');
-Route::get('delete/category{id}', 'HelloController@deleteCategory');
 
 
 
+Route::get('/','HelloController@index');
+Route::get('contact/us','helloController@contact')->name('contact');
+Route::get('about/us','helloController@about')->name('about');
 
 
 
+//category crud are here============
+Route::get('all/category','boloController@AllCategory')->name('all.category');
+Route::get('add/category','boloController@AddCategory')->name('add.category');
+Route::post('store/category','boloController@StoreCategory')->name('store.category');
+Route::get('view/category/{id}','boloController@ViewCategory');
+Route::get('delete/category/{id}','boloController@DeleteCategory');
+Route::get('edit/category/{id}','boloController@EditCategory');
+Route::post('update/category/{id}','boloController@UpdateCategory');
 
+//posts crud are here
+Route::get('write/post','PostController@writePost')->name('write.post');
+Route::post('store/post','PostController@StorePost')->name('store.post');
+Route::get('all/post','PostController@AllPost')->name('all.post');
+Route::get('view/post/{id}','PostController@ViewPost');
+Route::get('delete/post/{id}','PostController@DeletePost');
+Route::get('edit/post/{id}','PostController@EditPost');
+Route::post('update/post/{id}','PostController@UpdatePost');
