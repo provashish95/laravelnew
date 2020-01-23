@@ -36,7 +36,7 @@ class HelloController extends Controller
                  'message'=>'Succsessfully Category Inserted',
                  'alert-type'=>'success'
              );
-            return redirect()->back()->with($notificaton);
+            return Redirect()->route('all.category')->with($notificaton);
         }else{
             $notificaton =array(
                 'message'=>'Something went wrong !',
@@ -57,4 +57,13 @@ class HelloController extends Controller
 //         return response()->json($category);
        return view('posts.categoryview')->with('cat', $category);
     }
+    public function deleteCategory($id){
+        $delete = DB::table('categories')->where('id', $id)->delete();
+            $notificaton =array(
+                'message'=>'Succsessfully Category delete',
+                'alert-type'=>'success'
+            );
+            return redirect()->back()->with($notificaton);
+        }
+
 }

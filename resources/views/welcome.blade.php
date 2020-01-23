@@ -122,11 +122,14 @@
 <!--roy roy roy --><!--roy roy roy -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <!--roy roy roy --><!--roy roy roy -->
-<!--roy roy roy --><!--roy roy roy -->
-
 
 <!-- Custom scripts for this template -->
 <script src="{{asset('public/js/clean-blog.min.js')}}"></script>
+
+
+
+<script src="{{asset('https://unpkg.com/sweetalert/dist2/sweetalert.min.js')}}"></script>
+
 <!--roy roy roy--><!--roy roy roy-->
 <!--roy roy roy--><!--roy roy roy-->
 <script>
@@ -150,7 +153,27 @@
 </script>
 <!--roy roy roy--><!--roy roy roy-->
 <!--roy roy roy--><!--roy roy roy-->
-
+<script>
+    $(document).on("click","#delete", function (e) {
+        e.preventDefault();
+        var link = $(this).attr("href");
+        Swal({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            buttons : true,
+            dangerMode: true
+        })
+            .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = link;
+            }else {
+                swal("safe data");
+            }
+        });
+    });
+</script>
+<!--roy roy roy--><!--roy roy roy--><!--roy roy roy--><!--roy roy roy--><!--roy roy roy--><!--roy roy roy-->
 </body>
 
 </html>

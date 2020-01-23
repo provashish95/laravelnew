@@ -23,6 +23,8 @@ Route::get(md5('all/category'), 'HelloController@allCategory')->name('all.catego
 Route::get(md5('add/category'), 'HelloController@addCategory')->name('add.category');
 Route::post(md5('store/category'), 'HelloController@storeCategory')->name('store.category');
 Route::get('view/category{id}', 'HelloController@viewCategory');
+Route::get('delete/category{id}', 'HelloController@deleteCategory');
+
 
 
 
